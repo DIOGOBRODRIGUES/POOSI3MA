@@ -1,3 +1,10 @@
+package br.uninassau.sistema_bancario.dados;
+
+import java.util.Arrays;
+
+import br.uninassau.sistema_bancario.negocios.beans.Conta;
+
+
 public class RepositorioContas {
     private Conta[] contas;
     private int proxima;
@@ -50,4 +57,11 @@ public class RepositorioContas {
 
         return i;
     }
+    @Override
+    public String toString() {
+        return "RepositorioContas [contas=" + Arrays.toString(contas) + ", proxima=" + proxima + "]";
+    }
+
+    
+
 }
