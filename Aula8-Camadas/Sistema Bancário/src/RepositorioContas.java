@@ -14,17 +14,7 @@ public class RepositorioContas {
 
 //*******************Procurar Conta*************** */
     public Conta procurar (String num){
-        int i = 0;
-        boolean achou = false;
-
-        while((!achou) && (i < this.proxima)){
-            if(num.equals(String.valueOf(this.contas[i].getNumero()))){
-                achou = true;
-            }else{
-                i = i + 1;
-            }
-        }
-
+        int i = this.procurarIndice(num);
         Conta resultado  = null;
         if(i != this.proxima){
             resultado  = this.contas[i];
@@ -35,6 +25,19 @@ public class RepositorioContas {
 //***********************Remover Conta************* */
 
     public void remover(String num){
+        int i = this.procurarIndice(num);
+        if (i != this.proxima){
+            this.contas[i] = this.contas[this.proxima - 1];
+            this.contas[this.proxima - 1] = null;
+            this.proxima = this.proxima - 1;
+            System.out.println("Conta" + num + "foi removida");
+        }else{
+            System.out.println("Conta não existe");
+        }
+    }
+
+// ************* Procurar indice*********************/
+    private int procurarIndice(String num){
         int i  = 0;
         boolean achou = false;
         while((!achou) && (i < this.proxima)){
@@ -45,13 +48,6 @@ public class RepositorioContas {
             }
         }
 
-        if (i != this.proxima){
-            this.contas[i] = this.contas[this.proxima - 1];
-            this.contas[this.proxima - 1] = null;
-            this.proxima = this.proxima - 1;
-            System.out.println("Conta" + num + "foi removida");
-        }else{
-            System.out.println("Conta não existe");
-        }
+        return i;
     }
 }
