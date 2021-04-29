@@ -1,8 +1,9 @@
 import br.uninassau.sistema_bancario.dados.*;
 import br.uninassau.sistema_bancario.negocios.beans.Conta;
+import br.uninassau.sistema_bancario.negocios.beans.Poupanca;
 public class App {
     public static void main(String[] args) throws Exception {
-       RepositorioContas lista1 = new RepositorioContas(3);
+      /* RepositorioContas lista1 = new RepositorioContas(3);
        Conta c1 = new Conta ("1234", 100.50); 
        Conta c2 = new Conta ("2356", 200.13);
        Conta c3 = new Conta ("5646", 1000.50);
@@ -16,7 +17,13 @@ public class App {
        System.out.println(lista1.procurar("1234"));
 
        lista1.remover("1234");
-       System.out.println(lista1.toString());
-     
+       System.out.println(lista1.toString());*/
+
+       Poupanca p = new Poupanca("2123-5");
+       p.creditar(1000.00);
+       p.debitar(22.99);
+       p.renderJuros(0.02);
+       
+       System.out.println(p.getSaldo());
     }
 }
