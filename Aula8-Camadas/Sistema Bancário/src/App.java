@@ -1,5 +1,6 @@
 import br.uninassau.sistema_bancario.dados.*;
 import br.uninassau.sistema_bancario.negocios.beans.Conta;
+import br.uninassau.sistema_bancario.negocios.beans.ContaEspecial;
 import br.uninassau.sistema_bancario.negocios.beans.Poupanca;
 public class App {
     public static void main(String[] args) throws Exception {
@@ -19,11 +20,18 @@ public class App {
        lista1.remover("1234");
        System.out.println(lista1.toString());*/
 
-       Poupanca p = new Poupanca("2123-5");
+       /*Poupanca p = new Poupanca("2123-5");
        p.creditar(1000.00);
        p.debitar(22.99);
        p.renderJuros(0.02);
        
-       System.out.println(p.getSaldo());
+       System.out.println(p.getSaldo());*/
+
+
+       ContaEspecial contae = new ContaEspecial("126456-6");
+       contae.creditar(500.00);
+       contae.debitar(550.00);
+       contae.aumentarLimite(100);
+       System.out.println(contae.getSaldo());
     }
 }

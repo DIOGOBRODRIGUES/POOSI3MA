@@ -14,7 +14,8 @@ public class Conta {
     }
 
     public void debitar(double valor){
-        this.saldo -= valor;
+        if(valor <= this.saldo)
+            this.saldo -= valor;
     }
 
     public String getNumero(){
