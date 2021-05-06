@@ -27,11 +27,27 @@ public class App {
        
        System.out.println(p.getSaldo());*/
 
-
+/*
        ContaEspecial contae = new ContaEspecial("126456-6");
        contae.creditar(500.00);
        contae.debitar(550.00);
        contae.aumentarLimite(100);
-       System.out.println(contae.getSaldo());
+       System.out.println(contae.getSaldo());*/
+/*
+       Conta conta = new Poupanca("23456-7");
+       conta.creditar(100.00);
+       conta.debitar(30.50);
+       System.out.println(conta.getSaldo());*/
+
+       Conta contae = new ContaEspecial("12345-56");
+       contae.creditar(500.00);
+       contae.debitar(550.0);
+       //((ContaEspecial)contae).aumentarLimite(100.00);
+        //contae.debitar(75.00);
+        System.out.println(contae.getSaldo());
+
+
+
+
     }
 }
