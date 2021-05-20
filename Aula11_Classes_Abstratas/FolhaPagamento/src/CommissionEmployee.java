@@ -35,4 +35,12 @@ public class CommissionEmployee extends Employee{
         "commission employee",super.toString(), "groos sales", this.getGrossSale(),
         "commision rate", this.getCommissionRate());
     }
+
+    @Override
+    public double getPaymentAmount() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+
 }

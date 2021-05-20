@@ -6,6 +6,10 @@ public class SalariedEmployee extends Employee {
         this.setWeeklySalary(salary);
     }
 
+    public double getPaymentAmount(){
+        return this.getWeeklySalary();
+    }
+
     public void setWeeklySalary(double salary){
       /*  if(salary < 0)
             this.weeklySalary = 0;

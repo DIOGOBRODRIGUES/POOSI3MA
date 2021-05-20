@@ -38,5 +38,11 @@ public class HourlyEmployee extends Employee{
         "hours worked", this.getHours());
     }
 
+    @Override
+    public double getPaymentAmount() {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
     
 }
